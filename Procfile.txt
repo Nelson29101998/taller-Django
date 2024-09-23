@@ -2,4 +2,6 @@ release: python manage.py migrate
 
 release: python manage.py collecstatic
 
+releale: heroku ps:scale web=1
+
 web: gunicorn taller_Django.wsgi --log-file -
