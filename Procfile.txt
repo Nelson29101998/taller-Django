@@ -1,3 +1,5 @@
 release: python manage.py migrate
 
-web: gunicorn --bind 0.0.0.0:$PORT taller_Django.wsgi
+release: python manage.py collecstatic
+
+web: gunicorn --bind 0.0.0.0:$PORT taller_Django.wsgi --log-file -
