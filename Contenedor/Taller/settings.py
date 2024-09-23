@@ -27,7 +27,7 @@ SECRET_KEY = '06ppqkg-vvg69jd#&j=2^0e%u76)_^2o)($)djd#u_pr7qswax56869706ggktyiy'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://probardjango-82453d06dd1f.herokuapp.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['*', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -78,12 +78,12 @@ WSGI_APPLICATION = 'Taller.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}
 
 DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
 
