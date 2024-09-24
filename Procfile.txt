@@ -1,1 +1,1 @@
-web: gunicorn Taller.wsgi --log-file - &&
+web: gunicorn talle_Django.wsgi --log-file -
