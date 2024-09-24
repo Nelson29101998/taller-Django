@@ -1,1 +1,1 @@
-web: gunicorn talle_Django.wsgi --log-file -
+web: python manage.py migrate && gunicorn talle_Django.wsgi
