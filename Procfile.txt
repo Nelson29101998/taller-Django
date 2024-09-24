@@ -1,1 +1,3 @@
 web: gunicorn talle_Django.wsgi --log-file -
+
+worker: celery worker --app talle_Django.celery.app
