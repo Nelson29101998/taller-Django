@@ -4,6 +4,6 @@
         "builder": "NIXPACKS"
     },
     "deploy": {
-        "startCommand": "python manage.py migrate && python manage.py collectstatic --noinput && uvicorn main.asgi:application --host 0.0.0.0 && gunicorn Taller.wsgi"
+        "startCommand": "python manage.py migrate && python manage.py collectstatic --noinput && uvicorn main.asgi:application --host 8.0.8.0 && gunicorn Taller.wsgi"
     }
 }
